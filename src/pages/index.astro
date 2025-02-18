@@ -1,4 +1,5 @@
 ---
+import Socials from "../components/Socials.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -9,31 +10,31 @@ import Layout from "../layouts/Layout.astro";
   className="flex h-svh max-w-sm flex-col justify-center"
 >
   <main class="space-y-4">
+    <p>kyle thieringer (he/him)</p>
+    
     <p>
-      Miniblog is an opinionated and extremely minimal blogging template built
-      with <a
-        href="https://astro.build/"
+      im grad student at the university of washington in the labs of <a
+        href="https://www.ahmedlab.science"
         target="_blank"
-        class="text-blue-500 underline">Astro</a
+        class="text-[#41550A] font-[575] hover:underline hover:text-[#B6A12B] dark:text-[#B6A12B] dark:hover:text-[#41550A] hover:scale-105"
+        >sama ahmed</a
       > and <a
-        href="https://tailwindcss.com/"
+        href="https://faculty.washington.edu/tuthill/"
         target="_blank"
-        class="text-blue-500 underline">Tailwind</a
+        class="text-[#41550A] font-[575] hover:underline hover:text-[#B6A12B] dark:text-[#B6A12B] dark:hover:text-[#41550A] hover:scale-105"
+        >john tuthill</a
       >.
     </p>
     <p>
-      Design heavily inspired by <a
-        href="https://jrmyphlmn.com/"
-        target="_blank"
-        class="text-blue-500 underline">jrmyphlmn.com</a
-      >.
+      im currently working on a project to understand how brains stop behavior.
+      im interested in figuring out the mechanisms that lead to behavioral
+      flexibility, task switching, multi-tasking, etc. which all requiring
+      precise control over locomotion—either persisting through minor
+      perturbations or stopping the current motor programs. to address this
+      question, im using the drosophila flight motor because it is compact,
+      genetically accessible, and drives a beautifully robust behavior.
     </p>
-    <p>
-      To use this template, check out the <a
-        href="https://github.com/nicholasdly/miniblog?tab=readme-ov-file"
-        target="_blank"
-        class="text-blue-500 underline">GitHub repository</a
-      >.
-    </p>
+
+    <Socials />
   </main>
 </Layout>

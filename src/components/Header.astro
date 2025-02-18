@@ -5,15 +5,16 @@ import ThemeToggle from "./ThemeToggle.astro";
 
 <header class="mb-6 flex items-center justify-between" transition:name="header">
   <nav class="flex items-center gap-4">
-    <a href="/"> home </a>
-    <a href="/posts"> posts </a>
+    <a href="/">home</a>
+    <a href="/cv.pdf">cv</a>
     <a href={`mailto:${EMAIL}`}>email</a>
+    <a href="https://notes.kylethieringer.com">notes</a>
   </nav>
   <ThemeToggle />
 </header>
 
 <style>
   a {
-    @apply font-medium text-zinc-500 hover:text-zinc-900 hover:underline dark:hover:text-zinc-100;
+    @apply text-[#41550A] font-[575] hover:underline hover:text-[#B6A12B] dark:text-[#B6A12B] dark:hover:text-[#41550A] hover:scale-105;
   }
 </style>

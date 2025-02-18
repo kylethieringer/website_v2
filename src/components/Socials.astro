@@ -1,0 +1,66 @@
+---
+/**
+ * from https://github.com/saminnet/astro-simple-portfolio/blob/main/src/components/Socials.astro
+ *
+ * This section is for adding your social media links.
+ *
+ * 1. Add your social media links: Replace 'xxx' with your username for each social media platform.
+ * 2. Add more links: If you want to include more social media platforms, replicate the existing pattern and update the `Type` enum accordingly.
+ * 3. Adjust the order: You can change the order of the social media icons by rearranging the objects.
+ * 4. Customize icon colors: To change the color of the icons, refer to the Tailwind CSS color classes. Visit: https://tailwindcss.com/docs/customizing-colors
+ *
+ */
+
+enum Type {
+  gitHub = "GitHub",
+  blueSky = "BlueSky",
+  scholar = "scholar",
+  email = "email",
+}
+
+const socials = [
+  {
+    name: Type.gitHub,
+    url: "https://github.com/kylethieringer",
+    icon: "assets/github.svg",
+  },
+  {
+    name: Type.blueSky,
+    url: "https://bsky.app/profile/kylethieringer.com",
+    icon: "assets/bluesky.svg",
+  },
+  {
+    name: Type.scholar,
+    url: "https://scholar.google.com/citations?user=Xh7Ln5IAAAAJ",
+    icon: "assets/scholar.svg",
+  },
+  {
+    name: Type.email,
+    url: "mailto:kyle@kylethieringer.com",
+    icon: "assets/email.svg",
+  },
+];
+
+const getClass = (type: Type) =>
+  `scale-100 rounded-full transition justify-self-center duration-300 
+    hover:scale-110 animate-zoom-in`;
+---
+
+<div class="grid grid-cols-4 duration-500">
+  {
+    socials.map((social) => {
+      const href = social.url;
+      return (
+        <a
+          aria-label={social.name}
+          href={href}
+          class={getClass(social.name)}
+          target="_blank"
+          rel="nofollow noopner"
+        >
+          <img class="size-12 p-1" src={social.icon} alt={social.name} />
+        </a>
+      );
+    })
+  }
+</div>

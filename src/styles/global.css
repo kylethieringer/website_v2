@@ -3,16 +3,28 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
+  /* @font-face {
     font-family: "Geist";
     src: url("/fonts/geist-variable.woff2") format("woff2");
     font-display: swap;
-  }
-  @font-face {
+  } */
+  /* @font-face {
     font-family: "Geist Mono";
     src: url("/fonts/geist-mono-variable.woff2") format("woff2");
     font-display: swap;
-  }
+  } */
+    /* @font-face {
+    font-family: "Inconsolata";
+    src: url("/fonts/Inconsolata.otf") format("otf");
+    font-display: swap;
+  } */
+  @font-face {
+    font-family: 'amiri-regular';
+    src: url('/fonts/Amiri-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
   html.dark .astro-code,
   html.dark .astro-code span {
     color: var(--shiki-dark) !important;
