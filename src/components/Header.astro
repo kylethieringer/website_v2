@@ -1,5 +1,4 @@
 ---
-import { EMAIL } from "../consts";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
@@ -7,13 +6,13 @@ import ThemeToggle from "./ThemeToggle.astro";
   <nav class="flex items-center gap-4">
     <a href="/">home</a>
     <a href="/cv.pdf">cv</a>
-    <a href="https://notes.kylethieringer.com">notes</a>
+    // <a href="https://notes.kylethieringer.com">notes</a>
   </nav>
   <ThemeToggle />
 </header>
 
 <style>
   a {
-    @apply text-[#41550A] font-[575] hover:underline hover:text-[#B6A12B] dark:text-[#B6A12B] dark:hover:text-[#41550A] hover:scale-105;
+    @apply font-[575] text-[#41550A] hover:scale-105 hover:text-[#B6A12B] hover:underline dark:text-[#B6A12B] dark:hover:text-[#41550A];
   }
 </style>
